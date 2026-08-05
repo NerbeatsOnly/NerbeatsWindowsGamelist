@@ -101,6 +101,15 @@
     "cover": "covers/pc/cyberpunk 2077.jpg",
     "favorite": false
   },
+
+ {
+    "title": "crimson desert",
+    "platform": "PC",
+    "size": 150,
+    "cover": "covers/pc/crimson desert.jpg",
+    "favorite": false
+  },
+
   {
     "title": "dark souls remastered",
     "platform": "PC",
@@ -2262,6 +2271,14 @@
     "platform": "PC",
     "size": 130,
     "cover": "covers/pc/assassins creed shadows.jpg",
+    "favorite": false
+  },
+
+   {
+    "title": "beast of reincarnation",
+    "platform": "PC",
+    "size": 32,
+    "cover": "covers/pc/beast of reincarnation.jpg",
     "favorite": false
   },
 
