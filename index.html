@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NERBEATS GAME LIBRARY</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/..." rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="particles"></div>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <img id="logo" src="assets/nerbeats logo.jpg" alt="Logo">
+            <h1>NERBEATS</h1>
+            <p>GAME LIBRARY</p>
+        </div>
+
+        <nav>
+            <button class="menu active home-btn">
+    🏠 Home
+</button>
+            <button class="menu pc-btn">
+    🖥 PC Games
+</button>
+            <button class="menu switch-btn">
+    🎮 Switch Exclusives
+</button>
+
+<button class="menu retro-btn" id="retroBtn">
+
+    🕹️ Retro Collection
+
+    <button id="menuToggle" class="mobile-menu">
+    ☰
+</button>
+
+</button>
+        
+        </nav>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- HERO -->
+        <section class="hero" id="home">
+
+<div class="hero-background">
+
+    <!-- Background Blur -->
+    <video class="hero-video-bg"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto">
+
+        <source src="assets/videos/hero.mp4" type="video/mp4">
+
+    </video>
+
+    <!-- Main Video -->
+    <video
+    id="heroVideo"
+    class="hero-video-main"
+    autoplay
+    muted
+    playsinline
+    preload="auto">
+
+</video>
+
+<div class="youtube-card">
+
+    <div class="yt-badge">
+        🔥 LATEST VIDEO
+    </div>
+
+    <img id="ytThumb" src="" alt="YouTube Thumbnail">
+
+    <h3 id="ytTitle"></h3>
+
+    <a id="ytLink"
+       target="_blank"
+       class="watch-btn">
+
+        ▶ WATCH ON YOUTUBE
+
+    </a>
+
+    <div class="yt-dots">
+
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+
+    </div>
+
+</div>
+
+</div>
+
+            <div class="hero-overlay">
+
+                <span class="featured-tag">
+                    FEATURED GAME
+                </span>
+
+                <h2 id="heroTitle">
+                    007 FIRST LIGHT
+                </h2>
+
+                <p>
+                    Browse your complete gaming collection.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <button id="browseBtn">
+                        Browse Library
+                    </button>
+
+                    <button id="randomBtn">
+                        Random Game
+                    </button>
+
+                </div>
+
+            </div>
+
+            <button class="hero-btn prev-btn" id="prevBanner">❮</button>
+<button class="hero-btn next-btn" id="nextBannerBtn">❯</button>
+<div class="hero-progress">
+    <div class="hero-progress-bar" id="heroProgress"></div>
+</div>
+
+        </section>
+
+        <!-- SEARCH -->
+        <section class="toolbar">
+
+            <div class="search-box">
+
+                <input
+                    id="searchInput"
+                    type="text"
+                    placeholder="Search your library...">
+
+            </div>
+
+            <div class="filters">
+
+                <button class="filter active">
+                    All
+                </button>
+
+                <button class="filter" id="pcFilter">PC</button>
+
+                <button class="filter" id="switchFilter">Switch Exclusives</button>
+
+            </div>
+
+        </section>
+
+        <!-- CONTENT -->
+        <div class="content-wrapper">
+
+            <!-- GAME LIBRARY -->
+            <section class="library" id="library">
+
+                <section class="featured-section">
+
+    <div class="section-header">
+    <h2>Trending Games</h2>
+</div>
+
+    <div class="featured-row" id="trendingGames">
+
+        <!-- JavaScript will load games here -->
+
+    </div>
+
+</section>
+
+
+
+                <div id="game-grid" class="game-grid">
+
+                    <!-- JavaScript loads games here -->
+
+                </div>
+
+            </section>
+
+            <!-- INSTALL PLANNER -->
+            <aside class="planner">
+
+    <div class="planner-header">
+
+        <span id="plannerSummary">
+
+            📦 0 Games • 0 GB
+
+        </span>
+
+        <span class="planner-arrow">
+
+            ▲
+
+        </span>
+
+    </div>
+
+    <h3>🎮 Game Package Builder</h3>
+
+                <div class="storage-box">
+
+                    <label>Storage</label>
+
+                    <select id="storageSelect">
+
+                        <option value="512">
+                            512 GB
+                        </option>
+
+                        <option value="1024">
+                            1 TB
+                        </option>
+
+                        <option value="2048">
+                            2 TB
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="progress">
+
+                    <div id="progressBar"></div>
+
+                </div>
+
+                <p>
+                    Used:
+                    <span id="usedStorage">
+                        0 GB
+                    </span>
+                </p>
+
+                <p>
+                    Remaining:
+                    <span id="remainingStorage">
+                        512 GB
+                    </span>
+                </p>
+
+                <div class="selected-games">
+
+    <h4>📦 Package Contents</h4>
+
+    <input
+        id="customerName"
+        type="text"
+        placeholder="Customer Name">
+
+    <div class="planner-list">
+
+        <div id="installList">
+
+            No games added yet...
+
+        </div>
+
+    </div>
+
+    <div class="planner-footer">
+
+        <div class="package-total">
+
+            <strong>Total Size:</strong>
+
+            <span id="packageTotal">
+                0 GB
+            </span>
+
+        </div>
+
+        <div class="package-buttons">
+
+            <button id="copyPackage">
+                📋 COPY PACKAGE
+            </button>
+
+            <button id="clearPackage">
+                🗑 CLEAR PACKAGE
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+    </main>
+
+</div>
+
+<div id="toast" class="toast">
+
+    <div id="toastTitle"></div>
+
+    <div id="toastInfo"></div>
+
+</div>
+
+<script src="script.js"></script>
+<!-- Image Viewer -->
+<div id="imageViewer" class="image-viewer">
+
+    <span id="closeViewer">&times;</span>
+
+    <img id="viewerImage" src="" alt="Game Cover">
+
+</div>
+
+<!-- Game Details Popup -->
+

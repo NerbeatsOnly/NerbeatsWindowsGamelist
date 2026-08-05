@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nerbeats Admin</title>
+
+<link rel="stylesheet" href="admin.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+
+        <h1>🎮 Nerbeats Game Library Admin</h1>
+
+        <p>Edit Game Sizes Easily</p>
+
+    </header>
+
+    <div class="stats">
+
+    <div class="stat-card">
+
+        <h2 id="totalGames">0</h2>
+
+        <p>Total Games</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h2 id="totalStorage">0 GB</h2>
+
+        <p>Total Storage</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h2 id="averageSize">0 GB</h2>
+
+        <p>Average Size</p>
+
+    </div>
+
+</div>
+
+    <div class="toolbar">
+
+    <input
+        type="text"
+        id="search"
+        placeholder="Search game...">
+
+    <button id="sortAZ">A-Z</button>
+
+    <button id="sortBig">Largest</button>
+
+    <button id="sortSmall">Smallest</button>
+
+<button id="filterAll">All</button>
+<button id="filterPC">PC</button>
+<button id="filterSwitch">Switch</button>
+<button id="filterRetro">Retro</button>
+<button id="addGameBtn">➕ Add Game</button>
+<button id="exportBtn">
+    💾 Export JSON
+</button>
+
+</div>
+
+    
+
+    <div id="gameList"></div>
+
+</div>
+<div id="addGameModal" style="
+display:none;
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+background:#1f2937;
+padding:25px;
+border-radius:12px;
+z-index:9999;
+width:420px;
+box-shadow:0 0 30px rgba(0,0,0,.6);
+">
+
+    <h2>➕ Add New Game</h2>
+
+    <input
+        id="newTitle"
+        type="text"
+        placeholder="Game Title">
+
+    <br><br>
+
+    <select id="newPlatform">
+
+        <option value="PC">PC</option>
+
+        <option value="Switch">Switch</option>
+
+        <option value="Retro">Retro</option>
+
+    </select>
+
+    <br><br>
+
+    <input
+        id="newSize"
+        type="number"
+        placeholder="Size (GB)">
+
+    <br><br>
+
+    <input
+        id="newCover"
+        type="text"
+        placeholder="covers/pc/game.jpg">
+
+    <br><br>
+
+    <button id="saveNewGame">
+        💾 Save Game
+    </button>
+
+</div>
+<script src="admin.js"></script>
+
+</body>
+</html>

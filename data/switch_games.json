@@ -1,0 +1,125 @@
+[
+  {
+    "title": "Animal Crossing: New Horizons",
+    "platform": "Switch",
+    "size": 11,
+    "cover": "covers/switch/animal crossing new horizons.jpg",
+    "favorite": false
+  },
+  {
+    "title": "Astral Chain",
+    "platform": "Switch",
+    "size": 9,
+    "cover": "covers/switch/astral chain.jpg",
+    "favorite": false
+  },
+  {
+    "title": "Avatar: The Last Airbender - Quest for Balance",
+    "platform": "Switch",
+    "size": 6,
+    "cover": "covers/switch/avatar the last airbender quest for balance.jpg",
+    "favorite": false
+  },
+  {
+    "title": "Big Helmet Heroes",
+    "platform": "Switch",
+    "size": 9,
+    "cover": "covers/switch/big helmet heroes.jpg",
+    "favorite": false
+  },
+  {
+    "title": "Contra: Operation Galuga",
+    "platform": "Switch",
+    "size": 8,
+    "cover": "covers/switch/contra operation galuga.jpg",
+    "favorite": false
+  },
+  {
+    "title": "Cooking Mama: Cookstar",
+    "platform": "Switch",
+    "size": 7,
+    "cover": "covers/switch/cooking mama cookstar.jpg",
+    "favorite": false
+  },
+  {
+    "title": "Dave the Diver",
+    "platform": "Switch",
+    "size": 3,
+    "cover": "covers/switch/dave the diver.jpg",
+    "favorite": false
+  },
+  {
+    "title": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles",
+    "platform": "Switch",
+    "size": 9,
+    "cover": "covers/switch/demon slayer the hinokami chronicles.jpg",
+    "favorite": false
+  },
+  {
+    "title": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles 2",
+    "platform": "Switch",
+    "size": 11,
+    "cover": "covers/switch/demon slayer the hinokami chronicles 2.jpg",
+    "favorite": false
+  },
+  {
+    "title": "Donkey Kong Country Returns HD",
+    "platform": "Switch",
+    "size": 9,
+    "cover": "covers/switch/donkey kong country returns hd.jpg",
+    "favorite": false
+  },
+  {
+    "title": "Donkey Kong Country: Tropical Freeze",
+    "platform": "Switch",
+    "size": 7,
+    "cover": "covers/switch/donkey kong country tropical freeze.jpg",
+    "favorite": false
+  },
+  {
+    "title": "Doraemon Story of Seasons",
+    "platform": "Switch",
+    "size": 3,
+    "cover": "covers/switch/doraemon story of seasons.jpg",
+    "favorite": false
+  },
+
+  
+  {
+    "title": "Fantasy Life i: The Girl Who Steals Time",
+    "platform": "Switch",
+    "size": 8,
+    "cover": "covers/switch/fantasy life i the girl who steals time.jpg",
+    "favorite": false
+  },
+  {
+    "title": "Final Fantasy IX",
+    "platform": "Switch",
+    "size": 6,
+    "cover": "covers/switch/final fantasy ix.jpg",
+    "favorite": false
+  },
+  
+  {
+    "title": "Final Fantasy XII: The Zodiac Age",
+    "platform": "Switch",
+    "size": 13,
+    "cover": "covers/switch/final fantasy xii the zodiac age.jpg",
+    "favorite": false
+  },
+ 
+  {
+    "title": "Fire Emblem Engage",
+    "platform": "Switch",
+    "size": 14,
+    "cover": "covers/switch/fire emblem engage.jpg",
+    "favorite": false
+  },
+  {
+    "title": "Fire Emblem: Three Houses",
+    "platform": "Switch",
+    "size": 12,
+    "cover": "covers/switch/fire emblem three houses.jpg",
+    "favorite": false
+  }
+]
