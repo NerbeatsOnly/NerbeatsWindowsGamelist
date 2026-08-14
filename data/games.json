@@ -105,7 +105,7 @@
  {
     "title": "crimson desert",
     "platform": "PC",
-    "size": 150,
+    "size": 130,
     "cover": "covers/pc/crimson desert.jpg",
     "favorite": false
   },
@@ -1031,7 +1031,7 @@
 {
     "title": "avatar frontiers of pandora",
     "platform": "PC",
-    "size": 127,
+    "size": 135,
     "cover": "covers/pc/avatar frontiers of pandora.jpg",
     "favorite": false
   },
