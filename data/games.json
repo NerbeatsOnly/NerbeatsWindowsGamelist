@@ -224,7 +224,7 @@
   {
     "title": "dispatch",
     "platform": "PC",
-    "size": 45,
+    "size": 4,
     "cover": "covers/pc/dispatch.jpg",
     "favorite": false
   },
@@ -707,7 +707,7 @@
   {
     "title": "injustice 2",
     "platform": "PC",
-    "size": 45,
+    "size": 40,
     "cover": "covers/pc/injustice 2.jpg",
     "favorite": false
   },
@@ -875,10 +875,10 @@
     "favorite": false
   },
   {
-    "title": "madden nfl 20",
+    "title": "madden nfl 27",
     "platform": "PC",
-    "size": 34,
-    "cover": "covers/pc/madden nfl 20.jpg",
+    "size": 60,
+    "cover": "covers/pc/madden nfl 27.jpg",
     "favorite": false
   },
   {
@@ -1029,6 +1029,14 @@
   },
 
 {
+    "title": "avatar frontiers of pandora",
+    "platform": "PC",
+    "size": 127,
+    "cover": "covers/pc/avatar frontiers of pandora.jpg",
+    "favorite": false
+  },
+
+  {
     "title": "avatar legends",
     "platform": "PC",
     "size": 9,
@@ -1802,14 +1810,14 @@
   {
     "title": "uncharted legacy of thieves collection",
     "platform": "PC",
-    "size": 45,
+    "size": 98,
     "cover": "covers/pc/uncharted legacy of thieves collection.jpg",
     "favorite": false
   },
   {
     "title": "undisputed",
     "platform": "PC",
-    "size": 45,
+    "size": 15,
     "cover": "covers/pc/undisputed.jpg",
     "favorite": false
   },
@@ -1902,7 +1910,7 @@
   {
     "title": "wuchang fallen feathers",
     "platform": "PC",
-    "size": 45,
+    "size": 42,
     "cover": "covers/pc/wuchang.jpg",
     "favorite": false
   },
@@ -2240,7 +2248,7 @@
   {
     "title": "The Callisto Protocol",
     "platform": "PC",
-    "size": 45,
+    "size": 96,
     "cover": "covers/pc/callisto protocol.jpg",
     "favorite": false
   },
@@ -2259,7 +2267,7 @@
     "favorite": false
   },
   {
-    "title": "avatar: the last airbender",
+    "title": "avatar the last airbender",
     "platform": "Switch",
     "size": 6,
     "cover": "covers/switch/avatar the last air bender quest for balance.jpg",
@@ -2543,6 +2551,15 @@
     "cover": "covers/switch/mario kart 8 deluxe.jpg",
     "favorite": false
   },
+
+{
+    "title": "ori and the blind forest",
+    "platform": "Switch",
+    "size": 4,
+    "cover": "covers/switch/ori and the blind forest.jpg",
+    "favorite": false
+  },
+
   {
     "title": "super mario odyssey",
     "platform": "Switch",
