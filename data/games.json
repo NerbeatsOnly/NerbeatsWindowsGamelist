@@ -916,6 +916,15 @@
     "cover": "covers/pc/marvels avengers.jpg",
     "favorite": false
   },
+
+  {
+    "title": "marvel tokon fighting souls",
+    "platform": "PC",
+    "size": 20,
+    "cover": "covers/pc/marvel tokon fighting souls.jpg",
+    "favorite": false
+  },
+
   {
     "title": "max payne 3",
     "platform": "PC",
