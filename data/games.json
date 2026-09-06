@@ -415,6 +415,16 @@
     "favorite": false
   },
 
+
+ {
+    "title": "a plague tale resonance",
+    "platform": "PC",
+    "size": 77,
+    "cover": "covers/pc/a plague tale resonance.jpg",
+    "favorite": false
+  },
+
+
   {
     "title": "fight night champion",
     "platform": "PC",
@@ -1054,6 +1064,15 @@
   },
 
   {
+    "title": "mortal kombat 1",
+    "platform": "PC",
+    "size": 162,
+    "cover": "covers/pc/mortal kombat 1.jpg",
+    "favorite": false
+  },
+
+
+  {
     "title": "mortal kombat 11",
     "platform": "PC",
     "size": 132,
@@ -1246,6 +1265,15 @@
     "cover": "covers/pc/one piece world seeker.jpg",
     "favorite": false
   },
+
+  {
+    "title": "onimusha way of the sword",
+    "platform": "PC",
+    "size": 56,
+    "cover": "covers/pc/onimusha way of the sword.jpg",
+    "favorite": false
+  },
+
   {
     "title": "palworld",
     "platform": "PC",
@@ -1637,6 +1665,15 @@
     "cover": "covers/pc/spongebob titans of the tide.jpg",
     "favorite": false
   },
+
+  {
+    "title": "star wars outlaw",
+    "platform": "PC",
+    "size": 83,
+    "cover": "covers/pc/star wars outlaw.jpg",
+    "favorite": false
+  },
+
   {
     "title": "star wars battlefront 2",
     "platform": "PC",
