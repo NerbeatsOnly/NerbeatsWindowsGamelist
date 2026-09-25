@@ -307,6 +307,15 @@
     "cover": "covers/pc/dynasty warriors.jpg",
     "favorite": false
   },
+
+ {
+    "title": "dune awakening",
+    "platform": "PC",
+    "size": 38,
+    "cover": "covers/pc/dune awakening.jpg",
+    "favorite": false
+  },
+
   {
     "title": "EA sports college football 27",
     "platform": "PC",
@@ -1532,6 +1541,15 @@
     "cover": "covers/pc/silent hill f.jpg",
     "favorite": false
   },
+
+ {
+    "title": "silent hill townfall",
+    "platform": "PC",
+    "size": 74,
+    "cover": "covers/pc/silent hill townfall.jpg",
+    "favorite": false
+  },
+
   {
     "title": "skullgirls 2nd encore",
     "platform": "PC",
@@ -1546,6 +1564,15 @@
     "cover": "covers/pc/skyrim.jpg",
     "favorite": false
   },
+
+{
+    "title": "the blood of dawnwalker",
+    "platform": "PC",
+    "size": 50,
+    "cover": "covers/pc/the blood of dawnwalker.jpg",
+    "favorite": false
+  },
+
   {
     "title": "sleeping dogs",
     "platform": "PC",
@@ -2074,6 +2101,15 @@
     "cover": "covers/pc/back4blood.jpg",
     "favorite": false
   },
+
+  {
+    "title": "blackwood",
+    "platform": "PC",
+    "size": 25,
+    "cover": "covers/pc/blackwood.jpg",
+    "favorite": false
+  },
+
   {
     "title": "Baldur's Gate 3",
     "platform": "PC",
