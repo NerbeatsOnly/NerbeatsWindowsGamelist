@@ -1210,10 +1210,10 @@
     "favorite": false
   },
   {
-    "title": "ninja turtles mutant unleashed",
+    "title": "teenage mutant ninja turtles unleashed",
     "platform": "PC",
     "size": 27,
-    "cover": "covers/pc/ninja turtles mutant unleashed.jpg",
+    "cover": "covers/pc/teenage mutant ninja turtles unleashed.jpg",
     "favorite": false
   },
   {
@@ -2209,6 +2209,55 @@
     "cover": "covers/pc/bright memory infinite.jpg",
     "favorite": false
   },
+
+ {
+    "title": "brigandine abyss",
+    "platform": "PC",
+    "size": 11,
+    "cover": "covers/pc/brigandine abyss.jpg",
+    "favorite": false
+  },
+
+ {
+    "title": "daymare 1994",
+    "platform": "PC",
+    "size": 30,
+    "cover": "covers/pc/daymare 1994.jpg",
+    "favorite": false
+  },
+
+ {
+    "title": "devil may cry 4",
+    "platform": "PC",
+    "size": 20,
+    "cover": "covers/pc/devil may cry 4.jpg",
+    "favorite": false
+  },
+
+ {
+    "title": "dragonquest VII reimagined",
+    "platform": "PC",
+    "size": 7,
+    "cover": "covers/pc/dragonquest VII reimagined.jpg",
+    "favorite": false
+  },
+
+  {
+    "title": "mortal shell 2",
+    "platform": "PC",
+    "size": 66,
+    "cover": "covers/pc/mortal shell 2.jpg",
+    "favorite": false
+  },
+
+  {
+    "title": "ys x proud nordics",
+    "platform": "PC",
+    "size": 8,
+    "cover": "covers/pc/ys x proud nordics.jpg",
+    "favorite": false
+  },
+
   {
     "title": "bulletstorm",
     "platform": "PC",
