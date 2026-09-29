@@ -810,8 +810,6 @@ function loadTrendingGames(){
     const frame = container.closest('.featured-frame');
     if(!frame) return;
 
-    const next = frame.querySelector('.trending-next');
-    const prev = frame.querySelector('.trending-prev');
     const dots = Array.from(frame.querySelectorAll('.trending-dots i'));
     let dotIndex = 0;
     const setDot = () => dots.forEach((dot,i) => dot.classList.toggle('active', i === dotIndex));
@@ -834,8 +832,6 @@ function loadTrendingGames(){
         setDot();
     };
 
-    if(next) next.onclick = () => move('next');
-    if(prev) prev.onclick = () => move('prev');
     setDot();
 
     clearInterval(window.nerbeatsTrendingTimer);
@@ -2312,3 +2308,169 @@ setInterval(()=>{
   else initMobileVideosNav();
   setTimeout(initMobileVideosNav,400);
 })();
+
+/* NERBEATS UI CLICK SOUND */
+
+
+/* NERBEATS UI CLICK SOUND — subtle handheld-inspired tactile click */
+(function(){
+  let audioCtx = null;
+  let master = null;
+  let lastClick = 0;
+
+  function getAudio(){
+    const Ctx = window.AudioContext || window.webkitAudioContext;
+    if(!Ctx) return null;
+    if(!audioCtx){
+      audioCtx = new Ctx();
+      master = audioCtx.createGain();
+      master.gain.value = 0.045;
+      master.connect(audioCtx.destination);
+    }
+    if(audioCtx.state === 'suspended') audioCtx.resume().catch(()=>{});
+    return audioCtx;
+  }
+
+  function uiClick(){
+    const now = performance.now();
+    if(now - lastClick < 45) return;
+    lastClick = now;
+    const ctx = getAudio();
+    if(!ctx || !master) return;
+
+    const t = ctx.currentTime;
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    const filter = ctx.createBiquadFilter();
+
+    osc.type = 'triangle';
+    osc.frequency.setValueAtTime(1150, t);
+    osc.frequency.exponentialRampToValueAtTime(520, t + 0.055);
+
+    filter.type = 'lowpass';
+    filter.frequency.setValueAtTime(2400, t);
+    filter.Q.value = 0.7;
+
+    gain.gain.setValueAtTime(0.0001, t);
+    gain.gain.exponentialRampToValueAtTime(1, t + 0.004);
+    gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.065);
+
+    osc.connect(filter);
+    filter.connect(gain);
+    gain.connect(master);
+    osc.start(t);
+    osc.stop(t + 0.07);
+  }
+
+  document.addEventListener('pointerdown', function(e){
+    const target = e.target.closest('button, a, [role="button"], .filter, .menu, .mobile-nav-item, .mobile-nav-builder, .add-btn');
+    if(!target || target.disabled) return;
+    uiClick();
+  }, true);
+})();
+
+
+/* NERBEATS TACTILE UI SOUND
+   Uses Web Audio so no external MP3 is required. Starts/resumes on the user's
+   pointer gesture, which avoids autoplay restrictions. */
+(function(){
+  let audioCtx = null;
+
+  function getAudio(){
+    try{
+      if(!audioCtx){
+        const AC = window.AudioContext || window.webkitAudioContext;
+        if(!AC) return null;
+        audioCtx = new AC();
+      }
+      if(audioCtx.state === 'suspended') audioCtx.resume().catch(()=>{});
+      return audioCtx;
+    }catch(e){ return null; }
+  }
+
+  function uiClickSound(){
+    const ctx = getAudio();
+    if(!ctx) return;
+
+    const now = ctx.currentTime;
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    const filter = ctx.createBiquadFilter();
+
+    osc.type = 'square';
+    osc.frequency.setValueAtTime(520, now);
+    osc.frequency.exponentialRampToValueAtTime(820, now + 0.045);
+
+    filter.type = 'lowpass';
+    filter.frequency.setValueAtTime(2600, now);
+    filter.Q.value = 0.7;
+
+    gain.gain.setValueAtTime(0.0001, now);
+    gain.gain.exponentialRampToValueAtTime(0.075, now + 0.006);
+    gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.075);
+
+    osc.connect(filter);
+    filter.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start(now);
+    osc.stop(now + 0.08);
+  }
+
+  document.addEventListener('pointerdown', function(e){
+    const el = e.target.closest('button, a, .filter, .menu, .game-card, .featured-card, .mobile-nav-item, .mobile-nav-builder, .genre-option, [role="button"]');
+    if(!el) return;
+    if(el.matches('input, textarea, select')) return;
+    uiClickSound();
+  }, true);
+
+  /* Make the first interaction explicitly unlock audio on browsers that require it. */
+  document.addEventListener('click', function(){ getAudio(); }, {capture:true, once:true});
+})();
+
+// ============================================================
+// NERBEATS MUSIC BUTTON
+// Music plays ONLY after pressing the upper-left button.
+// ============================================================
+(function(){
+  function initMusic(){
+    const button = document.getElementById("musicButton");
+    const music = document.getElementById("bgMusic");
+    if(!button || !music) return;
+
+    music.volume = 0.35;
+
+    button.addEventListener("click", function(e){
+      e.preventDefault();
+      e.stopPropagation();
+
+      if(music.paused){
+        music.play().then(function(){
+          button.textContent = "🔊 MUSIC ON";
+          button.classList.add("playing");
+          button.setAttribute("aria-pressed","true");
+        }).catch(function(err){
+          console.warn("NERBEATS music playback failed:", err);
+          button.textContent = "⚠️ PLAY MUSIC";
+        });
+      }else{
+        music.pause();
+        button.textContent = "🎵 MUSIC";
+        button.classList.remove("playing");
+        button.setAttribute("aria-pressed","false");
+      }
+    });
+
+    music.addEventListener("ended", function(){
+      button.textContent = "🎵 MUSIC";
+      button.classList.remove("playing");
+      button.setAttribute("aria-pressed","false");
+    });
+  }
+
+  if(document.readyState === "loading"){
+    document.addEventListener("DOMContentLoaded", initMusic, {once:true});
+  }else{
+    initMusic();
+  }
+})();
+
