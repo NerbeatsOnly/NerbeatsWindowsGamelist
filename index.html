@@ -1,6 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<style>
+/* FINAL LOGO - REMOVE OUTER CIRCLE */
+@media screen and (max-width:768px){
+
+    .mobile-showcase .mobile-brand-ring{
+        width:164px !important;
+        height:164px !important;
+
+        padding:0 !important;
+        margin:2px auto 12px !important;
+
+        background:none !important;
+        border:none !important;
+        outline:none !important;
+
+        box-shadow:none !important;
+        animation:none !important;
+
+        border-radius:0 !important;
+        overflow:visible !important;
+    }
+
+    .mobile-showcase .mobile-brand-ring::before,
+    .mobile-showcase .mobile-brand-ring::after{
+        display:block !important;
+        content:"" !important;
+    }
+
+    .mobile-showcase .mobile-brand-ring img{
+        width:164px !important;
+        height:164px !important;
+
+        display:block !important;
+
+        padding:0 !important;
+        margin:0 !important;
+
+        object-fit:contain !important;
+
+        border:none !important;
+        outline:none !important;
+        border-radius:0 !important;
+
+        background:none !important;
+        box-shadow:none !important;
+    }
+}
+</style>
+
 <head>
 
 <meta charset="UTF-8">
@@ -11,7 +60,118 @@
 
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/..." rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@500;700;800;900&family=Poppins:wght@400;500;600;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+
+
+
+<!-- V23.1 — LARGER, CLOSER NEON CHARACTER SIDES -->
+<style>
+@media (max-width: 768px){
+    .mobile-showcase{
+        position:relative !important;
+        overflow:hidden !important;
+        isolation:isolate !important;
+    }
+
+    /* Characters now frame the logo instead of sitting far at the edges. */
+    .showcase-side-art{
+        position:absolute !important;
+        top:2px !important;
+        bottom:auto !important;
+        width:168px !important;
+        height:292px !important;
+        z-index:4 !important;
+        pointer-events:none !important;
+        display:flex !important;
+        align-items:flex-start !important;
+        opacity:1 !important;
+    }
+
+    .showcase-side-art::before{
+        content:"" !important;
+        position:absolute !important;
+        inset:18% 4% 12% !important;
+        border-radius:50% !important;
+        background:
+          radial-gradient(circle, rgba(0,245,255,.26) 0%, rgba(0,245,255,.10) 34%, transparent 70%),
+          radial-gradient(circle at 70% 45%, rgba(255,0,220,.24), transparent 62%) !important;
+        filter:blur(18px) !important;
+        z-index:-1 !important;
+        animation:nbCharacterGlow 2.6s ease-in-out infinite alternate !important;
+    }
+
+    .showcase-side-art img{
+        width:100% !important;
+        height:100% !important;
+        object-fit:contain !important;
+        display:block !important;
+        transform:scale(1.12) !important;
+        transform-origin:center top !important;
+        filter:
+          saturate(1.18)
+          contrast(1.08)
+          brightness(1.05)
+          drop-shadow(0 0 5px rgba(0,255,255,.85))
+          drop-shadow(0 0 13px rgba(0,255,255,.58))
+          drop-shadow(0 0 24px rgba(255,0,210,.42))
+          drop-shadow(0 0 38px rgba(0,130,255,.22)) !important;
+    }
+
+    .showcase-side-left{
+        left:4px !important;
+        justify-content:flex-start !important;
+        -webkit-mask-image:linear-gradient(90deg,#000 0%,#000 88%,transparent 100%) !important;
+        mask-image:linear-gradient(90deg,#000 0%,#000 88%,transparent 100%) !important;
+    }
+
+    .showcase-side-right{
+        right:4px !important;
+        justify-content:flex-end !important;
+        -webkit-mask-image:linear-gradient(270deg,#000 0%,#000 88%,transparent 100%) !important;
+        mask-image:linear-gradient(270deg,#000 0%,#000 88%,transparent 100%) !important;
+    }
+
+    .mobile-brand-ring{
+        position:relative !important;
+        z-index:6 !important;
+    }
+
+    .mobile-socials,
+    .mobile-tagline{
+        position:relative !important;
+        z-index:7 !important;
+    }
+
+    @keyframes nbCharacterGlow{
+        0%{
+          opacity:.68;
+          transform:scale(.96);
+        }
+        100%{
+          opacity:1;
+          transform:scale(1.05);
+        }
+    }
+}
+
+/* Keep the character artwork hidden on desktop. */
+@media (min-width:769px){
+    .showcase-side-art{
+        display:none !important;
+    }
+}
+
+/* Smaller phones: still large, but keep the logo readable. */
+@media (max-width:390px){
+    .showcase-side-art{
+        width:145px !important;
+        height:270px !important;
+    }
+    .showcase-side-art img{
+        transform:scale(1.08) !important;
+    }
+}
+</style>
 
 </head>
 
@@ -25,7 +185,7 @@
     <aside class="sidebar">
 
         <div class="brand">
-            <img id="logo" src="assets/nerbeats logo.jpg" alt="Logo">
+            <img id="logo" src="assets/nerbeats_logo.png" alt="Logo">
             <h1>NERBEATS</h1>
             <p>GAME LIBRARY</p>
         </div>
@@ -41,15 +201,8 @@
     🎮 Switch Exclusives
 </button>
 
-<button class="menu retro-btn" id="retroBtn">
-
-    🕹️ Retro Collection
-
-    <button id="menuToggle" class="mobile-menu">
-    ☰
-</button>
-
-</button>
+<button class="menu retro-btn" id="retroBtn">🕹️ Retro Collection</button>
+<button id="menuToggle" class="mobile-menu" type="button" aria-label="Toggle menu">☰</button>
         
         </nav>
 
@@ -58,22 +211,27 @@
     <!-- MAIN CONTENT -->
     <main class="main-content">
 
-        <!-- HERO -->
+        <!-- MOBILE APP SHOWCASE -->
+    <section class="mobile-showcase">
+        <div class="mobile-showcase-bg"></div>
+<div class="mobile-brand-ring">
+    <img src="assets/nerbeats logo.jpg" alt="NERBEATS Game Library">
+</div>
+        <div class="mobile-socials" aria-label="Social links">
+            <a class="social-youtube" href="https://www.youtube.com/@Nerbeats" target="_blank" rel="noopener" aria-label="YouTube"><span class="social-icon social-icon-youtube"><img src="assets/social/youtube.png" alt="YouTube"></span><small>YouTube</small></a>
+            <a class="social-tiktok" href="https://www.tiktok.com/@nerbeats?_r=1&_t=ZS-9A7DFHtqQuj" target="_blank" rel="noopener" aria-label="TikTok"><span class="social-icon social-icon-tiktok"><img src="assets/social/tiktok.png" alt="TikTok"></span><small>TikTok</small></a>
+            <a class="social-facebook" href="https://www.facebook.com/share/14t4XgeyZAv/" target="_blank" rel="noopener" aria-label="Facebook"><span class="social-icon social-icon-facebook"><img src="assets/social/facebook.png" alt="Facebook"></span><small>Facebook</small></a>
+        </div>
+        <div class="mobile-tagline">LIFE IS GAME. <b>PLAY TO WIN.</b></div>
+    </section>
+
+    <!-- HERO -->
         <section class="hero" id="home">
 
 <div class="hero-background">
 
     <!-- Background Blur -->
-    <video class="hero-video-bg"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="auto">
-
-        <source src="assets/videos/hero.mp4" type="video/mp4">
-
-    </video>
+    <div class="hero-video-bg" aria-hidden="true"></div>
 
     <!-- Main Video -->
     <video
@@ -160,24 +318,46 @@
         <!-- SEARCH -->
         <section class="toolbar">
 
-            <div class="search-box">
+            <div class="search-box v19-search-wrap">
 
                 <input
                     id="searchInput"
                     type="text"
-                    placeholder="Search your library...">
+                    placeholder="Search your library..."
+                    autocomplete="off">
+                <button id="v19ClearSearch" class="v19-clear-search" type="button" aria-label="Clear search" title="Clear search">×</button>
 
             </div>
 
             <div class="filters">
 
-                <button class="filter active">
-                    All
-                </button>
+                <button class="filter active" type="button"><span class="filter-icon">▦</span><span>All</span></button>
 
-                <button class="filter" id="pcFilter">PC</button>
+                <button class="filter" id="pcFilter" type="button"><span class="filter-icon">▣</span><span>PC</span></button>
 
-                <button class="filter" id="switchFilter">Switch Exclusives</button>
+                <button class="filter" id="switchFilter" type="button"><span class="filter-icon">▮▮</span><span>Switch</span></button>
+
+                <button class="filter retro-filter" type="button"><span class="filter-icon">🎮</span><span>Retro</span></button>
+
+                <div class="genre-filter-wrap">
+                    <button class="genre-filter-button" id="genreFilterButton" type="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="filter-icon">☷</span><span>Genre</span>
+                    </button>
+                    <div class="genre-menu" id="genreMenu" role="menu" aria-hidden="true">
+                        <button type="button" class="genre-option active" data-genre="All">All Genres</button>
+                        <button type="button" class="genre-option" data-genre="Action">Action</button>
+                        <button type="button" class="genre-option" data-genre="Adventure">Adventure</button>
+                        <button type="button" class="genre-option" data-genre="RPG">RPG</button>
+                        <button type="button" class="genre-option" data-genre="Shooter">Shooter</button>
+                        <button type="button" class="genre-option" data-genre="Racing">Racing</button>
+                        <button type="button" class="genre-option" data-genre="Sports">Sports</button>
+                        <button type="button" class="genre-option" data-genre="Fighting">Fighting</button>
+                        <button type="button" class="genre-option" data-genre="Horror">Horror</button>
+                        <button type="button" class="genre-option" data-genre="Open World">Open World</button>
+                        <button type="button" class="genre-option" data-genre="Strategy">Strategy</button>
+                        <button type="button" class="genre-option" data-genre="Simulation">Simulation</button>
+                    </div>
+                </div>
 
             </div>
 
@@ -189,23 +369,33 @@
             <!-- GAME LIBRARY -->
             <section class="library" id="library">
 
-                <section class="featured-section">
 
-    <div class="section-header">
-    <h2>Trending Games</h2>
+
+
+
+                
+
+
+
+
+
+<!-- TRENDING GAMES -->
+<div class="featured-section" id="trendingSection">
+  <div class="section-header trending-header">
+    <h2>🔥 TRENDING GAMES</h2>
+    <button class="trending-view-all" type="button" onclick="document.getElementById('game-grid')?.scrollIntoView({behavior:'smooth',block:'start'})">VIEW ALL</button>
+  </div>
+  <div class="featured-frame">
+    <button class="trending-arrow trending-prev" type="button" aria-label="Previous">‹</button>
+    <div class="featured-row" id="trendingGames"></div>
+    <button class="trending-arrow trending-next" type="button" aria-label="Next">›</button>
+    <div class="trending-dots" aria-hidden="true">
+      <i class="active"></i><i></i><i></i><i></i><i></i>
+    </div>
+  </div>
 </div>
 
-    <div class="featured-row" id="trendingGames">
-
-        <!-- JavaScript will load games here -->
-
-    </div>
-
-</section>
-
-
-
-                <div id="game-grid" class="game-grid">
+<div id="game-grid" class="game-grid">
 
                     <!-- JavaScript loads games here -->
 
@@ -213,118 +403,115 @@
 
             </section>
 
-            <!-- INSTALL PLANNER -->
-            <aside class="planner">
+            <!-- GAME PACKAGE BUILDER -->
+            <aside class="planner" id="packageBuilder">
 
-    <div class="planner-header">
-
-        <span id="plannerSummary">
-
-            📦 0 Games • 0 GB
-
-        </span>
-
-        <span class="planner-arrow">
-
-            ▲
-
-        </span>
-
-    </div>
-
-    <h3>🎮 Game Package Builder</h3>
-
-                <div class="storage-box">
-
-                    <label>Storage</label>
-
-                    <select id="storageSelect">
-
-                        <option value="512">
-                            512 GB
-                        </option>
-
-                        <option value="1024">
-                            1 TB
-                        </option>
-
-                        <option value="2048">
-                            2 TB
-                        </option>
-
-                    </select>
-
+                <div class="planner-header" id="plannerCircle">
+                    <div class="circle-builder-icon">🎮</div>
+                    <div class="circle-builder-count">
+                        <span id="plannerSummary">0 Games<br><small>0 GB</small></span>
+                    </div>
+                    <span class="planner-arrow">▲</span>
                 </div>
 
-                <div class="progress">
+                <div class="circle-builder-content">
+                    <h3>🎮 Game Package Builder</h3>
 
-                    <div id="progressBar"></div>
+                    <div class="storage-box">
+                        <label>Storage</label>
+                        <select id="storageSelect">
+                            <option value="512">512 GB</option>
+                            <option value="1024">1 TB</option>
+                            <option value="2048">2 TB</option>
+                        </select>
+                    </div>
 
+                    <div class="progress">
+                        <div id="progressBar"></div>
+                    </div>
+
+                    <p>Used: <span id="usedStorage">0 GB</span></p>
+                    <p>Remaining: <span id="remainingStorage">512 GB</span></p>
+
+                    <div class="selected-games">
+                        <h4>📦 Package Contents</h4>
+                        <input id="customerName" type="text" placeholder="Customer Name">
+                        <div class="planner-list">
+                            <div id="installList">No games added yet...</div>
+                        </div>
+                    </div>
+
+                    <div class="planner-footer">
+                        <div class="package-total">
+                            <strong>Total Size:</strong>
+                            <span id="packageTotal">0 GB</span>
+                        </div>
+
+                        <div class="package-buttons">
+                            <button id="copyPackage">📋 COPY PACKAGE</button>
+                            <button id="clearPackage">🗑 CLEAR PACKAGE</button>
+                        </div>
+                    </div>
                 </div>
+            </aside>
 
-                <p>
-                    Used:
-                    <span id="usedStorage">
-                        0 GB
-                    </span>
-                </p>
 
-                <p>
-                    Remaining:
-                    <span id="remainingStorage">
-                        512 GB
-                    </span>
-                </p>
-
-                <div class="selected-games">
-
-    <h4>📦 Package Contents</h4>
-
-    <input
-        id="customerName"
-        type="text"
-        placeholder="Customer Name">
-
-    <div class="planner-list">
-
-        <div id="installList">
-
-            No games added yet...
-
-        </div>
-
+<section id="contact" class="contact-anchor" aria-label="Contacts">
+    <div class="contact-anchor-card">
+        <h3>CONTACTS</h3>
+        <p>Use your preferred Nerbeats contact channel to get in touch.</p>
+        <a href="https://www.youtube.com/@Nerbeats" target="_blank" rel="noopener">YouTube / Nerbeats</a>
     </div>
+</section>
 
-    <div class="planner-footer">
-
-        <div class="package-total">
-
-            <strong>Total Size:</strong>
-
-            <span id="packageTotal">
-                0 GB
-            </span>
-
-        </div>
-
-        <div class="package-buttons">
-
-            <button id="copyPackage">
-                📋 COPY PACKAGE
-            </button>
-
-            <button id="clearPackage">
-                🗑 CLEAR PACKAGE
-            </button>
-
-        </div>
-
-    </div>
+</main>
 
 </div>
 
-    </main>
+<nav class="mobile-bottom-nav" aria-label="Mobile navigation">
+    <button class="mobile-nav-item active" type="button" data-target="home"><span>⌂</span><small>Home</small></button>
+    <button class="mobile-nav-item" type="button" data-target="library"><span>▦</span><small>Library</small></button>
+    <button class="mobile-nav-builder" type="button" id="mobileBuilderNav"><span>🎮</span><small>Builder</small></button>
+    <button class="mobile-nav-item" type="button" id="mobileRandomPickerNav"><span>🎲</span><small>Random</small></button>
+    <button class="mobile-nav-item" type="button" data-target="contact"><span>✉</span><small>Contact</small></button>
+</nav>
 
+
+
+<!-- NERBEATS CONTACT POPUP -->
+<div id="contactPopup" class="contact-popup" aria-hidden="true">
+  <div class="contact-popup-backdrop" data-contact-close></div>
+  <div class="contact-popup-card" role="dialog" aria-modal="true" aria-labelledby="contactPopupTitle">
+    <button class="contact-popup-close" type="button" data-contact-close aria-label="Close">×</button>
+    <div class="contact-popup-kicker">⚡ NERBEATS GAMING</div>
+    <h2 id="contactPopupTitle">CONTACTS</h2>
+    <p>Message or call Nerbeats Gaming.</p>
+    <a class="contact-call" href="tel:09959320498">☎ CALL NOW <span>0995-9320-498</span></a>
+    <div class="contact-popup-socials">
+      <a href="https://www.facebook.com/share/14t4XgeyZAv/" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.tiktok.com/@nerbeats?_r=1&_t=ZS-9A7DFHtqQuj" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://www.youtube.com/@Nerbeats" target="_blank" rel="noopener">YouTube</a>
+    </div>
+  </div>
+</div>
+
+<!-- NERBEATS RANDOM PACKAGE PICKER -->
+<div id="randomPackageModal" class="random-package-modal" aria-hidden="true">
+  <div class="random-package-backdrop" data-random-close></div>
+  <div class="random-package-card" role="dialog" aria-modal="true" aria-labelledby="randomPackageTitle">
+    <button class="random-package-close" type="button" data-random-close aria-label="Close">×</button>
+    <div class="random-package-kicker">🎲 NERBEATS RANDOM PICKER</div>
+    <h2 id="randomPackageTitle">Pick Your Game Package</h2>
+    <p class="random-package-subtitle">Let Nerbeats choose your package.</p>
+    <div class="random-package-options">
+      <button type="button" class="random-package-option" data-package="512"><span>512 GB</span><small>GAME PACKAGE</small></button>
+      <button type="button" class="random-package-option" data-package="1024"><span>1 TB</span><small>GAME PACKAGE</small></button>
+      <button type="button" class="random-package-option" data-package="2048"><span>2 TB</span><small>GAME PACKAGE</small></button>
+    </div>
+    <div id="randomPackageResult" class="random-package-result">Ready?</div>
+    <button id="pickRandomPackage" class="pick-random-package" type="button">🎲 PICK RANDOM PACKAGE</button>
+    <button id="useRandomPackage" class="use-random-package" type="button" disabled>USE THIS PACKAGE</button>
+  </div>
 </div>
 
 <div id="toast" class="toast">
@@ -336,6 +523,169 @@
 </div>
 
 <script src="script.js"></script>
+<script>
+/* ============================================================
+   PERMANENTLY REMOVE "GAME ADDED" POPUP
+   The game-cover-to-circle animation is the only feedback.
+   ============================================================ */
+(function () {
+    function suppressGameAddedToast() {
+        const toast = document.getElementById("toast");
+        const title = document.getElementById("toastTitle");
+        const info = document.getElementById("toastInfo");
+
+        if (!toast) return;
+
+        const text = (
+            (title ? title.textContent : "") + " " +
+            (info ? info.textContent : "")
+        ).toLowerCase();
+
+        if (
+            text.includes("game added") ||
+            text.includes("added to package") ||
+            text.includes("added")
+        ) {
+            toast.classList.remove("show");
+            toast.style.setProperty("display", "none", "important");
+            toast.style.setProperty("opacity", "0", "important");
+            toast.style.setProperty("visibility", "hidden", "important");
+            toast.style.setProperty("pointer-events", "none", "important");
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        suppressGameAddedToast();
+
+        const toast = document.getElementById("toast");
+        if (toast) {
+            new MutationObserver(suppressGameAddedToast).observe(toast, {
+                subtree: true,
+                childList: true,
+                characterData: true,
+                attributes: true
+            });
+        }
+
+        new MutationObserver(suppressGameAddedToast).observe(document.body, {
+            subtree: true,
+            childList: true
+        });
+    });
+})();
+</script>
+
+<script>
+(function () {
+    document.addEventListener("click", function (event) {
+        const addButton = event.target.closest(".add-btn");
+        if (!addButton) return;
+
+        /* The visual feedback is now the cover flying into the circle.
+           Hide the old "Game Added" toast for this action. */
+        document.body.classList.add("hide-game-added-toast");
+        setTimeout(function () {
+            document.body.classList.remove("hide-game-added-toast");
+        }, 900);
+
+        const card = addButton.closest(".game-card, .featured-card");
+        const image = card ? card.querySelector("img") : null;
+        const builder = window.innerWidth <= 768
+    ? document.getElementById("mobileBuilderNav")
+    : document.getElementById("packageBuilder");
+
+        if (!image || !builder) return;
+
+        const from = image.getBoundingClientRect();
+        const to = builder.getBoundingClientRect();
+
+        const flyer = document.createElement("img");
+        flyer.src = image.currentSrc || image.src;
+        flyer.className = "flying-game-to-builder";
+
+        flyer.style.left = (from.left + from.width / 2 - 35) + "px";
+        flyer.style.top = (from.top + from.height / 2 - 35) + "px";
+        flyer.style.transform = "scale(1) rotate(0deg)";
+
+        document.body.appendChild(flyer);
+
+        requestAnimationFrame(function () {
+            flyer.style.left = (to.left + to.width / 2 - 35) + "px";
+            flyer.style.top = (to.top + to.height / 2 - 35) + "px";
+            flyer.style.transform = "scale(.25) rotate(360deg)";
+            flyer.style.opacity = "0";
+        });
+
+        setTimeout(function () {
+            flyer.remove();
+            builder.classList.remove("builder-added");
+            void builder.offsetWidth;
+            builder.classList.add("builder-added");
+
+            setTimeout(function () {
+                builder.classList.remove("builder-added");
+            }, 750);
+        }, 700);
+    });
+})();
+</script>
+
+<script>
+(function(){
+    var randomNav = document.getElementById('mobileRandomPickerNav');
+    if(randomNav){
+        randomNav.addEventListener('click', function(e){
+            e.preventDefault();
+            if(typeof window.openNerbeatsRandomPicker === 'function') window.openNerbeatsRandomPicker();
+        });
+    }
+    document.querySelectorAll('.mobile-nav-item[data-target]').forEach(function(btn){
+        btn.addEventListener('click', function(){
+            var el=document.getElementById(btn.dataset.target);
+            if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+            document.querySelectorAll('.mobile-nav-item').forEach(function(x){x.classList.remove('active')});
+            btn.classList.add('active');
+        });
+    });
+    var builderBtn=document.getElementById('mobileBuilderNav');
+    if(builderBtn){ builderBtn.addEventListener('click', function(){ var p=document.getElementById('packageBuilder'); if(p){p.classList.toggle('open'); p.scrollIntoView({behavior:'smooth',block:'end'});} }); }
+    var latest=document.getElementById('latestViewAll');
+    if(latest){ latest.addEventListener('click', function(){ var g=document.getElementById('game-grid'); if(g) g.scrollIntoView({behavior:'smooth',block:'start'}); }); }
+})();
+</script>
+
+<script>
+(function(){
+    const frame=document.querySelector('.featured-frame');
+    const row=document.getElementById('trendingGames');
+    if(!frame || !row) return;
+    let activeDot=0;
+    const dots=Array.from(frame.querySelectorAll('.trending-dots i'));
+    function setDot(){
+        if(!dots.length) return;
+        dots.forEach(function(dot,i){dot.classList.toggle('active',i===activeDot);});
+    }
+    function nudge(direction){
+        row.style.animationDirection=direction;
+        row.style.animationPlayState='paused';
+        activeDot=(activeDot+(direction==='normal'?1:-1)+dots.length)%dots.length;
+        setDot();
+        setTimeout(function(){row.style.animationPlayState='running';},650);
+    }
+    setDot();
+    if(dots.length>1){
+        setInterval(function(){
+            activeDot=(activeDot+1)%dots.length;
+            setDot();
+        },4200);
+    }
+    const prev=frame.querySelector('.trending-prev');
+    const next=frame.querySelector('.trending-next');
+    if(prev) prev.addEventListener('click',function(){nudge('reverse');});
+    if(next) next.addEventListener('click',function(){nudge('normal');});
+})();
+</script>
+
 <!-- Image Viewer -->
 <div id="imageViewer" class="image-viewer">
 
@@ -345,5 +695,18 @@
 
 </div>
 
-<!-- Game Details Popup -->
-
+<!-- V16 Game Details Bottom Sheet / Modal -->
+<div id="gameDetailsModal" class="game-details-modal" aria-hidden="true">
+  <div class="game-details-backdrop" data-close-details></div>
+  <section class="game-details-panel" role="dialog" aria-modal="true" aria-labelledby="detailsTitle">
+    <button class="details-close" type="button" data-close-details aria-label="Close">×</button>
+    <div class="details-cover-wrap"><img id="detailsCover" src="" alt=""></div>
+    <div class="details-body">
+      <span id="detailsPlatform" class="details-platform"></span>
+      <h2 id="detailsTitle"></h2>
+      <div class="details-stats"><span>💾 <b id="detailsSize"></b> GB</span><span>🎮 <b id="detailsPlatform2"></b></span></div>
+      <p class="details-copy">Add this game to your Nerbeats package or browse another title from your library.</p>
+      <button id="detailsAdd" class="details-add" type="button">➕ ADD TO PACKAGE</button>
+    </div>
+  </section>
+</div>
