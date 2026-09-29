@@ -1994,11 +1994,6 @@ margin:20px auto;
 
 }
 
-.featured-row:hover{
-
-    animation-play-state:paused;
-
-}
 @media (max-width:768px){
 
     .game-card{
@@ -3091,8 +3086,7 @@ body.hide-game-added-toast #toast {
     border:0!important;background:transparent!important;box-shadow:none!important;
     animation:trendingScroll 26s linear infinite!important;scroll-snap-type:none!important;
   }
-  .featured-row:hover{animation-play-state:paused!important;}
-  .featured-card{
+.featured-card{
     flex:0 0 150px!important;width:150px!important;min-width:150px!important;
     border-radius:14px!important;background:#0a1220!important;overflow:hidden!important;
   }
@@ -8542,3 +8536,268 @@ body.contact-popup-open{overflow:hidden!important;}
 .contact-popup{z-index:2147483000!important;}
 .contact-popup.show{display:flex!important;visibility:visible!important;opacity:1!important;}
 .contact-popup-card{z-index:2!important;}
+
+/* FINAL TRENDING FIX — hovering the logo/page must NEVER pause Trending */
+@media (max-width:768px){
+  .featured-row{
+    animation-play-state:running!important;
+  }
+  .featured-row:hover{
+    animation-play-state:running!important;
+  }
+}
+
+
+/* NERBEATS FIX — bottom navigation: glow only, NO active underline/line */
+@media (max-width:768px){
+  .mobile-bottom-nav .mobile-nav-item.active::before,
+  .mobile-bottom-nav .mobile-nav-item.active::after{
+    content:none !important;
+    display:none !important;
+    width:0 !important;
+    height:0 !important;
+    background:none !important;
+    box-shadow:none !important;
+  }
+  .mobile-bottom-nav .mobile-nav-item.active{
+    color:#ffffff !important;
+    text-shadow:
+      0 0 6px rgba(0,229,255,.95),
+      0 0 14px rgba(0,229,255,.75),
+      0 0 26px rgba(124,58,237,.55) !important;
+    filter:drop-shadow(0 0 8px rgba(0,229,255,.62)) !important;
+    transform:none !important;
+  }
+  .mobile-bottom-nav .mobile-nav-item:not(.active){
+    text-shadow:none !important;
+    filter:none !important;
+  }
+
+  /* Videos page */
+  #videosSection{
+    scroll-margin-top:12px !important;
+    padding-bottom:110px !important;
+  }
+}
+
+/* ============================================================
+   NERBEATS V16.2 — MOBILE VIDEOS FRAMING FIX
+   ============================================================ */
+.nb-videos-section{
+  box-sizing:border-box!important;
+  width:100%!important;
+  max-width:100%!important;
+  min-height:auto!important;
+  margin:0 0 32px!important;
+  padding:22px!important;
+  border:1px solid rgba(0,234,255,.35)!important;
+  border-radius:22px!important;
+  background:
+    radial-gradient(circle at 15% 10%,rgba(0,234,255,.12),transparent 30%),
+    radial-gradient(circle at 85% 15%,rgba(255,0,204,.10),transparent 30%),
+    rgba(7,12,28,.92)!important;
+  overflow:hidden!important;
+}
+.nb-videos-header{box-sizing:border-box!important;width:100%!important;}
+.nb-videos-grid{box-sizing:border-box!important;width:100%!important;}
+.nb-video-card{box-sizing:border-box!important;width:100%!important;min-width:0!important;}
+.nb-video-thumb{width:100%!important;aspect-ratio:16/9!important;}
+.nb-video-thumb img{width:100%!important;height:100%!important;object-fit:cover!important;display:block!important;}
+
+@media(max-width:768px){
+  .nb-videos-section{
+    width:calc(100% - 16px)!important;
+    max-width:calc(100% - 16px)!important;
+    margin:8px 8px 108px!important;
+    padding:14px!important;
+    border-radius:18px!important;
+    min-height:0!important;
+  }
+  .nb-videos-header{
+    display:block!important;
+    margin:0 0 14px!important;
+  }
+  .nb-videos-kicker{
+    font-size:9px!important;
+    letter-spacing:1.4px!important;
+    margin-bottom:5px!important;
+  }
+  .nb-videos-header h2{
+    font-size:20px!important;
+    line-height:1.1!important;
+    margin:0 0 6px!important;
+  }
+  .nb-videos-header p{
+    font-size:10.5px!important;
+    line-height:1.45!important;
+    margin:0 0 11px!important;
+  }
+  .nb-videos-back{
+    display:inline-flex!important;
+    width:auto!important;
+    min-height:34px!important;
+    padding:8px 11px!important;
+    border-radius:10px!important;
+    font-size:9px!important;
+    align-items:center!important;
+    justify-content:center!important;
+  }
+  .nb-videos-grid{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:12px!important;
+  }
+  .nb-video-card{
+    border-radius:13px!important;
+  }
+  .nb-video-thumb{
+    aspect-ratio:16/9!important;
+    height:auto!important;
+    max-height:none!important;
+  }
+  .nb-video-thumb img{
+    width:100%!important;
+    height:100%!important;
+    object-fit:cover!important;
+  }
+  .nb-video-thumb span{
+    width:42px!important;
+    height:42px!important;
+    font-size:17px!important;
+  }
+  .nb-video-card h3{
+    padding:9px 10px 3px!important;
+    font-size:10px!important;
+    line-height:1.25!important;
+  }
+  .nb-video-card small{
+    padding:0 10px 10px!important;
+    font-size:8px!important;
+  }
+}
+
+/* ============================================================
+   NERBEATS — CURVED VIDEO FRAMES
+   ============================================================ */
+.nb-video-card{
+  overflow:hidden!important;
+  border-radius:20px!important;
+  border:1px solid rgba(0,234,255,.28)!important;
+  background:rgba(3,8,20,.78)!important;
+}
+.nb-video-thumb{
+  overflow:hidden!important;
+  border-radius:18px!important;
+}
+.nb-video-thumb img{
+  border-radius:18px!important;
+}
+
+@media(max-width:768px){
+  .nb-video-card{
+    border-radius:18px!important;
+  }
+  .nb-video-thumb,
+  .nb-video-thumb img{
+    border-radius:16px!important;
+  }
+}
+
+/* ============================================================
+   NERBEATS — VIDEOS POPUP ONLY
+   Keeps the Videos section out of the normal page flow.
+   ============================================================ */
+#videosSection.nb-videos-popup-open{
+  position:fixed !important;
+  left:50% !important;
+  top:50% !important;
+  right:auto !important;
+  bottom:auto !important;
+  width:min(92vw, 920px) !important;
+  max-width:920px !important;
+  max-height:82vh !important;
+  height:auto !important;
+  margin:0 !important;
+  padding:20px !important;
+  transform:translate(-50%,-50%) !important;
+  overflow-y:auto !important;
+  overflow-x:hidden !important;
+  z-index:100001 !important;
+  display:block !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  border:1px solid rgba(0,234,255,.48) !important;
+  border-radius:28px !important;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(0,234,255,.12), transparent 34%),
+    radial-gradient(circle at 85% 15%, rgba(255,0,214,.12), transparent 34%),
+    linear-gradient(145deg,rgba(4,12,35,.98),rgba(2,5,18,.98)) !important;
+  box-shadow:
+    0 0 12px rgba(0,234,255,.32),
+    0 0 40px rgba(124,58,237,.28),
+    0 24px 80px rgba(0,0,0,.75),
+    inset 0 0 28px rgba(0,234,255,.05) !important;
+  scrollbar-width:thin;
+}
+
+.nb-videos-popup-backdrop{
+  position:fixed !important;
+  inset:0 !important;
+  z-index:100000 !important;
+  display:none !important;
+  background:rgba(0,2,12,.58) !important;
+  backdrop-filter:blur(3px) !important;
+  -webkit-backdrop-filter:blur(3px) !important;
+}
+.nb-videos-popup-backdrop.show{display:block !important;}
+body.nb-videos-modal-open{overflow:hidden !important;}
+
+#videosSection.nb-videos-popup-open .nb-videos-header{
+  margin:0 0 14px !important;
+  padding:4px 2px 0 !important;
+}
+#videosSection.nb-videos-popup-open .nb-videos-header h2{
+  margin:2px 0 5px !important;
+}
+#videosSection.nb-videos-popup-open .nb-videos-grid{
+  max-height:none !important;
+  overflow:visible !important;
+}
+#videosSection.nb-videos-popup-open .nb-videos-back{
+  border-radius:999px !important;
+  border:1px solid rgba(0,234,255,.48) !important;
+  box-shadow:0 0 12px rgba(0,234,255,.18) !important;
+}
+
+@media(max-width:768px){
+  #videosSection.nb-videos-popup-open{
+    width:calc(100vw - 24px) !important;
+    max-width:none !important;
+    max-height:78vh !important;
+    padding:15px !important;
+    border-radius:24px !important;
+    bottom:auto !important;
+  }
+  #videosSection.nb-videos-popup-open .nb-videos-grid{
+    grid-template-columns:1fr !important;
+    gap:12px !important;
+  }
+  #videosSection.nb-videos-popup-open .nb-video-card{
+    border-radius:20px !important;
+    overflow:hidden !important;
+  }
+}
+
+
+/* FINAL — VIDEOS POPUP MUST SIT ABOVE BACKDROP */
+body > #videosSection.nb-videos-popup-open{
+  position:fixed !important;
+  z-index:100001 !important;
+  display:block !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  pointer-events:auto !important;
+}
+body > #nbVideosPopupBackdrop.show{
+  z-index:100000 !important;
+}

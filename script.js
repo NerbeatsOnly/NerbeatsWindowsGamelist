@@ -2240,3 +2240,75 @@ setInterval(()=>{
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',bind,{once:true}); else bind();
   setTimeout(bind,800);setTimeout(bind,2000);
 })();
+
+
+/* NERBEATS FIX — MOBILE VIDEOS POPUP + GLOW-ONLY NAV */
+(function(){
+  function initMobileVideosNav(){
+    const nav=document.querySelector('.mobile-bottom-nav');
+    const videosBtn=nav && nav.querySelector('.mobile-nav-item[data-target="videos"]');
+    const videos=document.getElementById('videosSection');
+    const videosBack=document.getElementById('videosBackBtn');
+    if(!nav || !videosBtn || !videos) return;
+    if(nav.dataset.videosFixed==='2') return;
+    nav.dataset.videosFixed='2';
+
+    let backdrop=document.getElementById('nbVideosPopupBackdrop');
+    if(!backdrop){
+      backdrop=document.createElement('div');
+      backdrop.id='nbVideosPopupBackdrop';
+      backdrop.className='nb-videos-popup-backdrop';
+      document.body.appendChild(backdrop);
+    }
+
+    function setActive(target){
+      nav.querySelectorAll('.mobile-nav-item').forEach(btn=>{
+        const active=btn.dataset.target===target;
+        btn.classList.toggle('active',active);
+        if(active) btn.setAttribute('aria-current','page');
+        else btn.removeAttribute('aria-current');
+      });
+    }
+
+    function closeVideos(e){
+      if(e){e.preventDefault();e.stopPropagation();e.stopImmediatePropagation();}
+      videos.classList.remove('nb-videos-popup-open');
+      videos.hidden=true;
+      videos.style.display='none';
+      backdrop.classList.remove('show');
+      document.body.classList.remove('nb-videos-modal-open');
+      setActive('home');
+    }
+
+    function showVideos(e){
+      if(e){e.preventDefault();e.stopPropagation();e.stopImmediatePropagation();}
+      document.body.classList.remove('v15-library-view');
+
+      /* Move the popup to BODY so no parent stacking context/transform can hide it behind the backdrop. */
+      if(videos.parentElement !== document.body){
+        document.body.appendChild(videos);
+      }
+
+      videos.hidden=false;
+      videos.style.display='block';
+      videos.classList.add('nb-videos-popup-open');
+      backdrop.classList.add('show');
+      document.body.classList.add('nb-videos-modal-open');
+      setActive('videos');
+    }
+
+    videosBtn.addEventListener('click',showVideos,true);
+    if(videosBack) videosBack.addEventListener('click',closeVideos,true);
+    backdrop.addEventListener('click',closeVideos,true);
+
+    const homeBtn=nav.querySelector('.mobile-nav-item[data-target="home"]');
+    if(homeBtn) homeBtn.addEventListener('click',closeVideos,true);
+
+    document.addEventListener('keydown',function(e){
+      if(e.key==='Escape' && videos.classList.contains('nb-videos-popup-open')) closeVideos(e);
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initMobileVideosNav,{once:true});
+  else initMobileVideosNav();
+  setTimeout(initMobileVideosNav,400);
+})();
