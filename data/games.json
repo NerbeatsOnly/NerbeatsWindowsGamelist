@@ -499,6 +499,15 @@
     "cover": "covers/pc/gears of war reloaded.jpg",
     "favorite": false
   },
+
+{
+    "title": "gears of war e-day",
+    "platform": "PC",
+    "size": 109,
+    "cover": "covers/pc/gears of war e-day.jpg",
+    "favorite": false
+  },
+
   {
     "title": "ghost of tsushima",
     "platform": "PC",
@@ -1195,6 +1204,81 @@
     "cover": "covers/pc/need for speed payback.jpg",
     "favorite": false
   },
+
+  {
+    "title": "need for speed undercover",
+    "platform": "PC",
+    "size": 7,
+    "cover": "covers/pc/need for speed undercover.jpg",
+    "favorite": false
+  },
+
+    {
+    "title": "spiderman web of shadows",
+    "platform": "PC",
+    "size": 8,
+    "cover": "covers/pc/spiderman web of shadows.jpg",
+    "favorite": false
+  },
+
+
+    {
+    "title": "street fighter vs tekken",
+    "platform": "PC",
+    "size": 6,
+    "cover": "covers/pc/street fighter vs tekken.jpg",
+    "favorite": false
+  },
+  
+    {
+    "title": "battlefield 3",
+    "platform": "PC",
+    "size": 16,
+    "cover": "covers/pc/battlefield 3.jpg",
+    "favorite": false
+  },
+
+     {
+    "title": "tmnt mutants in manhattan",
+    "platform": "PC",
+    "size": 8,
+    "cover": "covers/pc/tmnt mutants in manhattan.jpg",
+    "favorite": false
+  },
+
+    {
+    "title": "tmnt portal power",
+    "platform": "PC",
+    "size": 2,
+    "cover": "covers/pc/tmnt portal power.jpg",
+    "favorite": false
+  },
+
+
+      {
+    "title": "the amazing spiderman",
+    "platform": "PC",
+    "size": 8,
+    "cover": "covers/pc/the amazing spiderman.jpg",
+    "favorite": false
+  },
+
+      {
+    "title": "yaiba ninja gaiden z",
+    "platform": "PC",
+    "size": 6,
+    "cover": "covers/pc/yaiba ninja gaiden z.jpg",
+    "favorite": false
+  },
+
+     {
+    "title": "battlefield bad company 2",
+    "platform": "PC",
+    "size": 9,
+    "cover": "covers/pc/battlefield bad company 2.jpg",
+    "favorite": false
+  },
+
   {
     "title": "nier automata",
     "platform": "PC",
@@ -1210,7 +1294,7 @@
     "favorite": false
   },
   {
-    "title": "teenage mutant ninja turtles unleashed",
+    "title": "tmnt unleashed",
     "platform": "PC",
     "size": 27,
     "cover": "covers/pc/teenage mutant ninja turtles unleashed.jpg",
