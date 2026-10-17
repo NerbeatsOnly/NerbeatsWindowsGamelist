@@ -1307,6 +1307,23 @@
     "cover": "covers/pc/nioh 2.jpg",
     "favorite": false
   },
+
+  {
+    "title": "god of war 3 remastered",
+    "platform": "PC",
+    "size": 46,
+    "cover": "covers/pc/god of war 3.jpg",
+    "favorite": false
+  },
+
+    {
+    "title": "infamous second son",
+    "platform": "PC",
+    "size": 27,
+    "cover": "covers/pc/infamous second son.jpg",
+    "favorite": false
+  },
+
   {
     "title": "nioh 3",
     "platform": "PC",
