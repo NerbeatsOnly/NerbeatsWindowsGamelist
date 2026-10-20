@@ -13,6 +13,63 @@
     "cover": "covers/pc/carxstreet.jpg",
     "favorite": false
   },
+
+  {
+    "title": "call of duty modern warfare 4",
+    "platform": "PC",
+    "size": 65,
+    "cover": "covers/pc/call of duty modern warfare 4.jpg",
+    "favorite": false
+  },
+
+    {
+    "title": "bloodborne",
+    "platform": "PC",
+    "size": 30,
+    "cover": "covers/pc/bloodborne.jpg",
+    "favorite": false
+  },
+
+    {
+    "title": "castlevania belmonts curse",
+    "platform": "PC",
+    "size": 6,
+    "cover": "covers/pc/castlevania belmonts curse.jpg",
+    "favorite": false
+  },
+
+    {
+    "title": "dragons dogma 2",
+    "platform": "PC",
+    "size": 70,
+    "cover": "covers/pc/dragons dogma 2.jpg",
+    "favorite": false
+  },
+
+    {
+    "title": "driveclub",
+    "platform": "PC",
+    "size": 35,
+    "cover": "covers/pc/driveclub.jpg",
+    "favorite": false
+  },
+
+    {
+    "title": "the order 1886",
+    "platform": "PC",
+    "size": 30,
+    "cover": "covers/pc/the order 1886.jpg",
+    "favorite": false
+  },
+
+    {
+    "title": "uncharted nathan drake collection",
+    "platform": "PC",
+    "size": 57,
+    "cover": "covers/pc/uncharted nathan drake collection.jpg",
+    "favorite": false
+  },
+
   {
     "title": "chef life a restaurant simulator",
     "platform": "PC",
